@@ -10,15 +10,19 @@ PROMPT="Explain gravity in 3 sentences"
 MAX_TOKENS=100
 RUNS=4
 
+gpu_mem() {
+  nvidia-smi --query-gpu=memory.used --format=csv,noheader,nounits
+}
+
 echo "=== vLLM single-request benchmark: $MODEL ==="
 echo ""
+echo "GPU memory before warmup: $(gpu_mem) MB"
 
 # Warmup — let CUDA graphs compile
-echo "Warming up..."
 curl -s "$ENDPOINT" \
   -H "Content-Type: application/json" \
   -d "{\"model\":\"$MODEL\",\"messages\":[{\"role\":\"user\",\"content\":\"hi\"}],\"max_tokens\":5}" > /dev/null
-echo "Ready."
+echo "GPU memory after warmup:  $(gpu_mem) MB"
 echo ""
 
 for i in $(seq 1 $RUNS); do
@@ -39,5 +43,6 @@ for i in $(seq 1 $RUNS); do
   echo "  Total:       ${total}s"
   echo "  Tokens:      $tokens"
   echo "  Tokens/sec:  $tps"
+  echo "  GPU mem:     $(gpu_mem) MB"
   echo ""
 done

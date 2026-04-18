@@ -9,13 +9,17 @@ MODEL="llama3.1:8b"
 PROMPT="Explain gravity in 3 sentences"
 RUNS=4
 
+gpu_mem() {
+  nvidia-smi --query-gpu=memory.used --format=csv,noheader,nounits
+}
+
 echo "=== Ollama single-request benchmark: $MODEL ==="
 echo ""
+echo "GPU memory before warmup: $(gpu_mem) MB"
 
 # Warmup — loads model to GPU if unloaded
-echo "Warming up..."
 curl -s "$ENDPOINT" -d "{\"model\":\"$MODEL\",\"prompt\":\"hi\",\"stream\":false}" > /dev/null
-echo "Ready."
+echo "GPU memory after warmup:  $(gpu_mem) MB"
 echo ""
 
 for i in $(seq 1 $RUNS); do
@@ -40,5 +44,6 @@ for i in $(seq 1 $RUNS); do
   echo "  Tokens:      $eval_count"
   echo "  Tokens/sec:  $tps"
   echo "  Prefill:     ${prefill_ms}ms"
+  echo "  GPU mem:     $(gpu_mem) MB"
   echo ""
 done

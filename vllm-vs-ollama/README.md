@@ -22,7 +22,8 @@ These are **not apples-to-apples** — vLLM carries 4× more data per token. The
 
 - [`SETUP.md`](SETUP.md) — installation and environment
 - [`EXPERIMENT.md`](EXPERIMENT.md) — test methodology
-- [`RESULTS.md`](RESULTS.md) — numbers and analysis
+- [`RESULTS.md`](RESULTS.md) — single-request & concurrent throughput numbers
+- [`KV_CACHE.md`](KV_CACHE.md) — how each framework manages memory under load
 
 ## Scripts
 
@@ -31,6 +32,8 @@ These are **not apples-to-apples** — vLLM carries 4× more data per token. The
 - [`scripts/bench-single-vllm.sh`](scripts/bench-single-vllm.sh) — vLLM sequential latency
 - [`scripts/bench-concurrent-ollama.sh`](scripts/bench-concurrent-ollama.sh) — Ollama 10 parallel requests
 - [`scripts/bench-concurrent-vllm.sh`](scripts/bench-concurrent-vllm.sh) — vLLM 10 parallel requests
+- [`scripts/bench-kv-cache-ollama.sh`](scripts/bench-kv-cache-ollama.sh) — Ollama memory vs load (6 scenarios)
+- [`scripts/bench-kv-cache-vllm.sh`](scripts/bench-kv-cache-vllm.sh) — vLLM KV cache % vs load
 
 ## TL;DR
 
