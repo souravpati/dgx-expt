@@ -1,0 +1,2307 @@
+{
+  "device": "NVIDIA GB10",
+  "torch": "2.10.0+cu130",
+  "timestamp": 1778345318.0828998,
+  "peak_bandwidth": {
+    "nbytes": 1073741824,
+    "seconds": 0.010097248077392578,
+    "bytes_per_s": 212680091797.30353,
+    "gb_per_s": 212.68009179730353
+  },
+  "peak_compute": {
+    "bf16": {
+      "kernel": "bf16",
+      "shape": [
+        8192,
+        8192,
+        8192
+      ],
+      "seconds": 0.012240799903869629,
+      "flops_per_s": 89823511241975.0,
+      "tflops_per_s": 89.823511241975
+    },
+    "fp16": {
+      "kernel": "fp16",
+      "shape": [
+        8192,
+        8192,
+        8192
+      ],
+      "seconds": 0.012301759719848633,
+      "flops_per_s": 89378402181109.17,
+      "tflops_per_s": 89.37840218110917
+    },
+    "fp8_e4m3": {
+      "kernel": "fp8_e4m3",
+      "shape": [
+        8192,
+        8192,
+        8192
+      ],
+      "seconds": 0.005816351890563965,
+      "flops_per_s": 189038017036034.12,
+      "tflops_per_s": 189.03801703603412
+    },
+    "int8": {
+      "kernel": "int8",
+      "shape": [
+        8192,
+        8192,
+        8192
+      ],
+      "seconds": 0.007664415836334228,
+      "flops_per_s": 143456677097765.53,
+      "tflops_per_s": 143.45667709776552
+    },
+    "w4a16": {
+      "kernel": "w4a16",
+      "shape": [
+        8192,
+        8192,
+        8192
+      ],
+      "seconds": 0.14017327880859376,
+      "flops_per_s": 7843945986862.305,
+      "tflops_per_s": 7.8439459868623045
+    },
+    "w4a16_marlin": {
+      "kernel": "w4a16_marlin",
+      "shape": [
+        8192,
+        8192,
+        8192
+      ],
+      "seconds": 0.015578144073486328,
+      "flops_per_s": 70580399217602.92,
+      "tflops_per_s": 70.58039921760292
+    }
+  },
+  "peak_compute_bf16": {
+    "kernel": "bf16",
+    "shape": [
+      8192,
+      8192,
+      8192
+    ],
+    "seconds": 0.012240799903869629,
+    "flops_per_s": 89823511241975.0,
+    "tflops_per_s": 89.823511241975
+  },
+  "peak_compute_fp16": {
+    "kernel": "fp16",
+    "shape": [
+      8192,
+      8192,
+      8192
+    ],
+    "seconds": 0.012301759719848633,
+    "flops_per_s": 89378402181109.17,
+    "tflops_per_s": 89.37840218110917
+  },
+  "sweeps": {
+    "D4096_F4096_bf16": [
+      {
+        "B": 1,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "bf16",
+        "seconds": 0.00014419199526309967,
+        "flops_per_s": 232706621049.07394,
+        "bytes_moved": 33570816,
+        "intensity_flops_per_byte": 0.9995119570522206
+      },
+      {
+        "B": 2,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "bf16",
+        "seconds": 0.00013926400244235993,
+        "flops_per_s": 481882344490.1042,
+        "bytes_moved": 33587200,
+        "intensity_flops_per_byte": 1.9980487804878049
+      },
+      {
+        "B": 4,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "bf16",
+        "seconds": 0.00013811199367046357,
+        "flops_per_s": 971803566316.2222,
+        "bytes_moved": 33619968,
+        "intensity_flops_per_byte": 3.992202729044834
+      },
+      {
+        "B": 8,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "bf16",
+        "seconds": 0.00013779200613498689,
+        "flops_per_s": 1948120674990.6033,
+        "bytes_moved": 33685504,
+        "intensity_flops_per_byte": 7.968871595330739
+      },
+      {
+        "B": 16,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "bf16",
+        "seconds": 0.00014127999544143676,
+        "flops_per_s": 3800049046735.305,
+        "bytes_moved": 33816576,
+        "intensity_flops_per_byte": 15.875968992248062
+      },
+      {
+        "B": 32,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "bf16",
+        "seconds": 0.00014790399372577667,
+        "flops_per_s": 7259721640720.433,
+        "bytes_moved": 34078720,
+        "intensity_flops_per_byte": 31.50769230769231
+      },
+      {
+        "B": 64,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "bf16",
+        "seconds": 0.00015104000270366668,
+        "flops_per_s": 14217979406510.348,
+        "bytes_moved": 34603008,
+        "intensity_flops_per_byte": 62.06060606060606
+      },
+      {
+        "B": 128,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "bf16",
+        "seconds": 0.00016419200599193572,
+        "flops_per_s": 26158199785992.914,
+        "bytes_moved": 35651584,
+        "intensity_flops_per_byte": 120.47058823529412
+      },
+      {
+        "B": 256,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "bf16",
+        "seconds": 0.0001939840018749237,
+        "flops_per_s": 44281665028947.01,
+        "bytes_moved": 37748736,
+        "intensity_flops_per_byte": 227.55555555555554
+      },
+      {
+        "B": 384,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "bf16",
+        "seconds": 0.00017958399653434753,
+        "flops_per_s": 71748608654756.23,
+        "bytes_moved": 39845888,
+        "intensity_flops_per_byte": 323.36842105263156
+      },
+      {
+        "B": 512,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "bf16",
+        "seconds": 0.00020448000729084015,
+        "flops_per_s": 84017354124818.56,
+        "bytes_moved": 41943040,
+        "intensity_flops_per_byte": 409.6
+      },
+      {
+        "B": 768,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "bf16",
+        "seconds": 0.0002828480005264282,
+        "flops_per_s": 91108311630409.31,
+        "bytes_moved": 46137344,
+        "intensity_flops_per_byte": 558.5454545454545
+      },
+      {
+        "B": 1024,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "bf16",
+        "seconds": 0.0003442879915237427,
+        "flops_per_s": 99799409836896.66,
+        "bytes_moved": 50331648,
+        "intensity_flops_per_byte": 682.6666666666666
+      },
+      {
+        "B": 1536,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "bf16",
+        "seconds": 0.0005023360252380371,
+        "flops_per_s": 102599863363527.3,
+        "bytes_moved": 58720256,
+        "intensity_flops_per_byte": 877.7142857142857
+      },
+      {
+        "B": 2048,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "bf16",
+        "seconds": 0.0007376959919929505,
+        "flops_per_s": 93154195606171.45,
+        "bytes_moved": 67108864,
+        "intensity_flops_per_byte": 1024.0
+      },
+      {
+        "B": 3072,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "bf16",
+        "seconds": 0.0010684479475021361,
+        "flops_per_s": 96475654565094.2,
+        "bytes_moved": 83886080,
+        "intensity_flops_per_byte": 1228.8
+      },
+      {
+        "B": 4096,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "bf16",
+        "seconds": 0.001489248037338257,
+        "flops_per_s": 92287483364856.78,
+        "bytes_moved": 100663296,
+        "intensity_flops_per_byte": 1365.3333333333333
+      },
+      {
+        "B": 6144,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "bf16",
+        "seconds": 0.0019603519439697265,
+        "flops_per_s": 105163988967474.75,
+        "bytes_moved": 134217728,
+        "intensity_flops_per_byte": 1536.0
+      },
+      {
+        "B": 8192,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "bf16",
+        "seconds": 0.0027438080310821533,
+        "flops_per_s": 100181172964782.31,
+        "bytes_moved": 167772160,
+        "intensity_flops_per_byte": 1638.4
+      }
+    ],
+    "D4096_F4096_fp16": [
+      {
+        "B": 1,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp16",
+        "seconds": 0.00014297600090503693,
+        "flops_per_s": 234685763957.5923,
+        "bytes_moved": 33570816,
+        "intensity_flops_per_byte": 0.9995119570522206
+      },
+      {
+        "B": 2,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp16",
+        "seconds": 0.0001377280056476593,
+        "flops_per_s": 487256485595.822,
+        "bytes_moved": 33587200,
+        "intensity_flops_per_byte": 1.9980487804878049
+      },
+      {
+        "B": 4,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp16",
+        "seconds": 0.000138495996594429,
+        "flops_per_s": 969109081131.3668,
+        "bytes_moved": 33619968,
+        "intensity_flops_per_byte": 3.992202729044834
+      },
+      {
+        "B": 8,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp16",
+        "seconds": 0.0001409599930047989,
+        "flops_per_s": 1904337892460.4604,
+        "bytes_moved": 33685504,
+        "intensity_flops_per_byte": 7.968871595330739
+      },
+      {
+        "B": 16,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp16",
+        "seconds": 0.00013846400380134583,
+        "flops_per_s": 3877331994315.6357,
+        "bytes_moved": 33816576,
+        "intensity_flops_per_byte": 15.875968992248062
+      },
+      {
+        "B": 32,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp16",
+        "seconds": 0.00014556799829006195,
+        "flops_per_s": 7376221673807.994,
+        "bytes_moved": 34078720,
+        "intensity_flops_per_byte": 31.50769230769231
+      },
+      {
+        "B": 64,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp16",
+        "seconds": 0.00015967999398708342,
+        "flops_per_s": 13448670646704.25,
+        "bytes_moved": 34603008,
+        "intensity_flops_per_byte": 62.06060606060606
+      },
+      {
+        "B": 128,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp16",
+        "seconds": 0.00016630400717258453,
+        "flops_per_s": 25826000040653.453,
+        "bytes_moved": 35651584,
+        "intensity_flops_per_byte": 120.47058823529412
+      },
+      {
+        "B": 256,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp16",
+        "seconds": 0.00019078400731086732,
+        "flops_per_s": 45024395456813.04,
+        "bytes_moved": 37748736,
+        "intensity_flops_per_byte": 227.55555555555554
+      },
+      {
+        "B": 384,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp16",
+        "seconds": 0.00017971199750900269,
+        "flops_per_s": 71697505267307.1,
+        "bytes_moved": 39845888,
+        "intensity_flops_per_byte": 323.36842105263156
+      },
+      {
+        "B": 512,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp16",
+        "seconds": 0.0002033279985189438,
+        "flops_per_s": 84493376756469.55,
+        "bytes_moved": 41943040,
+        "intensity_flops_per_byte": 409.6
+      },
+      {
+        "B": 768,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp16",
+        "seconds": 0.00026659199595451357,
+        "flops_per_s": 96663831499265.61,
+        "bytes_moved": 46137344,
+        "intensity_flops_per_byte": 558.5454545454545
+      },
+      {
+        "B": 1024,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp16",
+        "seconds": 0.0003503040075302124,
+        "flops_per_s": 98085484691569.22,
+        "bytes_moved": 50331648,
+        "intensity_flops_per_byte": 682.6666666666666
+      },
+      {
+        "B": 1536,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp16",
+        "seconds": 0.000500927984714508,
+        "flops_per_s": 102888257643209.47,
+        "bytes_moved": 58720256,
+        "intensity_flops_per_byte": 877.7142857142857
+      },
+      {
+        "B": 2048,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp16",
+        "seconds": 0.0007376319766044617,
+        "flops_per_s": 93162279992708.69,
+        "bytes_moved": 67108864,
+        "intensity_flops_per_byte": 1024.0
+      },
+      {
+        "B": 3072,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp16",
+        "seconds": 0.001065343976020813,
+        "flops_per_s": 96756744698565.03,
+        "bytes_moved": 83886080,
+        "intensity_flops_per_byte": 1228.8
+      },
+      {
+        "B": 4096,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp16",
+        "seconds": 0.0014874559640884399,
+        "flops_per_s": 92398670475079.88,
+        "bytes_moved": 100663296,
+        "intensity_flops_per_byte": 1365.3333333333333
+      },
+      {
+        "B": 6144,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp16",
+        "seconds": 0.0021001598834991457,
+        "flops_per_s": 98163207395673.44,
+        "bytes_moved": 134217728,
+        "intensity_flops_per_byte": 1536.0
+      },
+      {
+        "B": 8192,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp16",
+        "seconds": 0.0028303999900817873,
+        "flops_per_s": 97116276111934.67,
+        "bytes_moved": 167772160,
+        "intensity_flops_per_byte": 1638.4
+      }
+    ],
+    "D4096_F4096_fp8_e4m3": [
+      {
+        "B": 1,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp8_e4m3",
+        "seconds": 7.740800082683563e-05,
+        "flops_per_s": 433474985034.9762,
+        "bytes_moved": 16789504,
+        "intensity_flops_per_byte": 1.9985362283483776
+      },
+      {
+        "B": 2,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp8_e4m3",
+        "seconds": 7.952000200748444e-05,
+        "flops_per_s": 843924324771.5675,
+        "bytes_moved": 16801792,
+        "intensity_flops_per_byte": 3.994149195514383
+      },
+      {
+        "B": 4,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp8_e4m3",
+        "seconds": 2.908799983561039e-05,
+        "flops_per_s": 4614195845658.893,
+        "bytes_moved": 16826368,
+        "intensity_flops_per_byte": 7.976630963972736
+      },
+      {
+        "B": 8,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp8_e4m3",
+        "seconds": 3.107200004160404e-05,
+        "flops_per_s": 8639143139822.887,
+        "bytes_moved": 16875520,
+        "intensity_flops_per_byte": 15.906796116504854
+      },
+      {
+        "B": 16,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp8_e4m3",
+        "seconds": 3.2095998525619506e-05,
+        "flops_per_s": 16727035663696.88,
+        "bytes_moved": 16973824,
+        "intensity_flops_per_byte": 31.62934362934363
+      },
+      {
+        "B": 32,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp8_e4m3",
+        "seconds": 3.830400109291077e-05,
+        "flops_per_s": 28032106134174.223,
+        "bytes_moved": 17170432,
+        "intensity_flops_per_byte": 62.534351145038165
+      },
+      {
+        "B": 64,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp8_e4m3",
+        "seconds": 4.4128000736236574e-05,
+        "flops_per_s": 48664875185169.03,
+        "bytes_moved": 17563648,
+        "intensity_flops_per_byte": 122.26865671641791
+      },
+      {
+        "B": 128,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp8_e4m3",
+        "seconds": 4.944000020623207e-05,
+        "flops_per_s": 86872315495229.42,
+        "bytes_moved": 18350080,
+        "intensity_flops_per_byte": 234.05714285714285
+      },
+      {
+        "B": 256,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp8_e4m3",
+        "seconds": 7.004799693822861e-05,
+        "flops_per_s": 122629268037100.05,
+        "bytes_moved": 19922944,
+        "intensity_flops_per_byte": 431.1578947368421
+      },
+      {
+        "B": 384,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp8_e4m3",
+        "seconds": 0.00010316800326108933,
+        "flops_per_s": 124892422851219.88,
+        "bytes_moved": 21495808,
+        "intensity_flops_per_byte": 599.4146341463414
+      },
+      {
+        "B": 512,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp8_e4m3",
+        "seconds": 0.00010694400221109391,
+        "flops_per_s": 160643596918031.12,
+        "bytes_moved": 23068672,
+        "intensity_flops_per_byte": 744.7272727272727
+      },
+      {
+        "B": 768,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp8_e4m3",
+        "seconds": 0.00014166399836540222,
+        "flops_per_s": 181907923490415.97,
+        "bytes_moved": 26214400,
+        "intensity_flops_per_byte": 983.04
+      },
+      {
+        "B": 1024,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp8_e4m3",
+        "seconds": 0.00022169600427150726,
+        "flops_per_s": 154985826113132.03,
+        "bytes_moved": 29360128,
+        "intensity_flops_per_byte": 1170.2857142857142
+      },
+      {
+        "B": 1536,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp8_e4m3",
+        "seconds": 0.00030351999402046206,
+        "flops_per_s": 169806301289414.94,
+        "bytes_moved": 35651584,
+        "intensity_flops_per_byte": 1445.6470588235295
+      },
+      {
+        "B": 2048,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp8_e4m3",
+        "seconds": 0.0003898240029811859,
+        "flops_per_s": 176283338661720.66,
+        "bytes_moved": 41943040,
+        "intensity_flops_per_byte": 1638.4
+      },
+      {
+        "B": 3072,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp8_e4m3",
+        "seconds": 0.0006226239800453187,
+        "flops_per_s": 165556127626978.34,
+        "bytes_moved": 54525952,
+        "intensity_flops_per_byte": 1890.4615384615386
+      },
+      {
+        "B": 4096,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp8_e4m3",
+        "seconds": 0.0007603840231895447,
+        "flops_per_s": 180749396726527.38,
+        "bytes_moved": 67108864,
+        "intensity_flops_per_byte": 2048.0
+      },
+      {
+        "B": 6144,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp8_e4m3",
+        "seconds": 0.0010581439733505249,
+        "flops_per_s": 194830226698940.12,
+        "bytes_moved": 92274688,
+        "intensity_flops_per_byte": 2234.181818181818
+      },
+      {
+        "B": 8192,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "fp8_e4m3",
+        "seconds": 0.001419808030128479,
+        "flops_per_s": 193602163891921.5,
+        "bytes_moved": 117440512,
+        "intensity_flops_per_byte": 2340.5714285714284
+      }
+    ],
+    "D4096_F4096_int8": [
+      {
+        "B": 32,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "int8",
+        "seconds": 2.4127999320626257e-05,
+        "flops_per_s": 44501900457287.08,
+        "bytes_moved": 17432576,
+        "intensity_flops_per_byte": 61.59398496240601
+      },
+      {
+        "B": 64,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "int8",
+        "seconds": 2.5151999667286874e-05,
+        "flops_per_s": 85380235226110.25,
+        "bytes_moved": 18087936,
+        "intensity_flops_per_byte": 118.72463768115942
+      },
+      {
+        "B": 128,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "int8",
+        "seconds": 4.6560000628232954e-05,
+        "flops_per_s": 92245859923713.72,
+        "bytes_moved": 19398656,
+        "intensity_flops_per_byte": 221.40540540540542
+      },
+      {
+        "B": 256,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "int8",
+        "seconds": 6.710399687290192e-05,
+        "flops_per_s": 128009283981544.86,
+        "bytes_moved": 22020096,
+        "intensity_flops_per_byte": 390.0952380952381
+      },
+      {
+        "B": 384,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "int8",
+        "seconds": 9.283199906349183e-05,
+        "flops_per_s": 138798065516045.36,
+        "bytes_moved": 24641536,
+        "intensity_flops_per_byte": 522.8936170212766
+      },
+      {
+        "B": 512,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "int8",
+        "seconds": 0.0001324799954891205,
+        "flops_per_s": 129678968666713.48,
+        "bytes_moved": 27262976,
+        "intensity_flops_per_byte": 630.1538461538462
+      },
+      {
+        "B": 768,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "int8",
+        "seconds": 0.0001757120043039322,
+        "flops_per_s": 146659324034717.12,
+        "bytes_moved": 32505856,
+        "intensity_flops_per_byte": 792.7741935483871
+      },
+      {
+        "B": 1024,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "int8",
+        "seconds": 0.0002881920039653778,
+        "flops_per_s": 119225162028186.72,
+        "bytes_moved": 37748736,
+        "intensity_flops_per_byte": 910.2222222222222
+      },
+      {
+        "B": 1536,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "int8",
+        "seconds": 0.0003578880131244659,
+        "flops_per_s": 144010432487090.9,
+        "bytes_moved": 48234496,
+        "intensity_flops_per_byte": 1068.5217391304348
+      },
+      {
+        "B": 2048,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "int8",
+        "seconds": 0.0005229759812355042,
+        "flops_per_s": 131400827574631.11,
+        "bytes_moved": 58720256,
+        "intensity_flops_per_byte": 1170.2857142857142
+      },
+      {
+        "B": 3072,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "int8",
+        "seconds": 0.0006692799925804139,
+        "flops_per_s": 154015085235967.28,
+        "bytes_moved": 79691776,
+        "intensity_flops_per_byte": 1293.4736842105262
+      },
+      {
+        "B": 4096,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "int8",
+        "seconds": 0.0009015679955482483,
+        "flops_per_s": 152444357109662.75,
+        "bytes_moved": 100663296,
+        "intensity_flops_per_byte": 1365.3333333333333
+      },
+      {
+        "B": 6144,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "int8",
+        "seconds": 0.0012864960432052612,
+        "flops_per_s": 160248009542542.6,
+        "bytes_moved": 142606336,
+        "intensity_flops_per_byte": 1445.6470588235295
+      },
+      {
+        "B": 8192,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "int8",
+        "seconds": 0.0017547199726104736,
+        "flops_per_s": 156650583132685.16,
+        "bytes_moved": 184549376,
+        "intensity_flops_per_byte": 1489.4545454545455
+      }
+    ],
+    "D4096_F4096_w4a16": [
+      {
+        "B": 1,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16",
+        "seconds": 1.91040001809597e-05,
+        "flops_per_s": 1756408693580.4443,
+        "bytes_moved": 8929280.0,
+        "intensity_flops_per_byte": 3.757798165137615
+      },
+      {
+        "B": 2,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16",
+        "seconds": 1.91040001809597e-05,
+        "flops_per_s": 3512817387160.8887,
+        "bytes_moved": 8945664.0,
+        "intensity_flops_per_byte": 7.501831501831502
+      },
+      {
+        "B": 4,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16",
+        "seconds": 2.1056000143289565e-05,
+        "flops_per_s": 6374322145071.531,
+        "bytes_moved": 8978432.0,
+        "intensity_flops_per_byte": 14.94890510948905
+      },
+      {
+        "B": 8,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16",
+        "seconds": 3.1168000772595404e-05,
+        "flops_per_s": 8612533667415.172,
+        "bytes_moved": 9043968.0,
+        "intensity_flops_per_byte": 29.681159420289855
+      },
+      {
+        "B": 16,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16",
+        "seconds": 7.311999797821045e-05,
+        "flops_per_s": 7342326680041.566,
+        "bytes_moved": 9175040.0,
+        "intensity_flops_per_byte": 58.51428571428571
+      },
+      {
+        "B": 32,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16",
+        "seconds": 0.00013868799805641174,
+        "flops_per_s": 7742139471674.056,
+        "bytes_moved": 9437184.0,
+        "intensity_flops_per_byte": 113.77777777777777
+      },
+      {
+        "B": 64,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16",
+        "seconds": 0.00026767998933792115,
+        "flops_per_s": 8022578203591.458,
+        "bytes_moved": 9961472.0,
+        "intensity_flops_per_byte": 215.57894736842104
+      },
+      {
+        "B": 128,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16",
+        "seconds": 0.000496832013130188,
+        "flops_per_s": 8644707229995.992,
+        "bytes_moved": 11010048.0,
+        "intensity_flops_per_byte": 390.0952380952381
+      },
+      {
+        "B": 256,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16",
+        "seconds": 0.0011717439889907836,
+        "flops_per_s": 7330897083925.697,
+        "bytes_moved": 13107200.0,
+        "intensity_flops_per_byte": 655.36
+      },
+      {
+        "B": 384,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16",
+        "seconds": 0.0016715840101242066,
+        "flops_per_s": 7708198816189.077,
+        "bytes_moved": 15204352.0,
+        "intensity_flops_per_byte": 847.448275862069
+      },
+      {
+        "B": 512,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16",
+        "seconds": 0.0021708478927612304,
+        "flops_per_s": 7913898178350.904,
+        "bytes_moved": 17301504.0,
+        "intensity_flops_per_byte": 992.969696969697
+      },
+      {
+        "B": 768,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16",
+        "seconds": 0.003184959888458252,
+        "flops_per_s": 8091092094875.463,
+        "bytes_moved": 21495808.0,
+        "intensity_flops_per_byte": 1198.8292682926829
+      },
+      {
+        "B": 1024,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16",
+        "seconds": 0.004180480003356934,
+        "flops_per_s": 8219089276927.305,
+        "bytes_moved": 25690112.0,
+        "intensity_flops_per_byte": 1337.469387755102
+      },
+      {
+        "B": 1536,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16",
+        "seconds": 0.006252223968505859,
+        "flops_per_s": 8243403917009.199,
+        "bytes_moved": 34078720.0,
+        "intensity_flops_per_byte": 1512.3692307692309
+      },
+      {
+        "B": 2048,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16",
+        "seconds": 0.00860598373413086,
+        "flops_per_s": 7985080945884.469,
+        "bytes_moved": 42467328.0,
+        "intensity_flops_per_byte": 1618.1728395061727
+      },
+      {
+        "B": 3072,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16",
+        "seconds": 0.013210783958435059,
+        "flops_per_s": 7802656937568.352,
+        "bytes_moved": 59244544.0,
+        "intensity_flops_per_byte": 1739.8938053097345
+      },
+      {
+        "B": 4096,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16",
+        "seconds": 0.017043392181396486,
+        "flops_per_s": 8064060957420.194,
+        "bytes_moved": 76021760.0,
+        "intensity_flops_per_byte": 1807.8896551724138
+      },
+      {
+        "B": 6144,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16",
+        "seconds": 0.025804864883422853,
+        "flops_per_s": 7989130388372.504,
+        "bytes_moved": 109576192.0,
+        "intensity_flops_per_byte": 1881.4162679425838
+      },
+      {
+        "B": 8192,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16",
+        "seconds": 0.034119937896728514,
+        "flops_per_s": 8056225300760.463,
+        "bytes_moved": 143130624.0,
+        "intensity_flops_per_byte": 1920.4688644688645
+      }
+    ],
+    "D4096_F4096_w4a16_marlin": [
+      {
+        "B": 1,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16_marlin",
+        "seconds": 2.1856000646948815e-05,
+        "flops_per_s": 1535250320588.0134,
+        "bytes_moved": 8667136.0,
+        "intensity_flops_per_byte": 3.8714555765595464
+      },
+      {
+        "B": 2,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16_marlin",
+        "seconds": 2.1983999758958816e-05,
+        "flops_per_s": 3052623032014.5503,
+        "bytes_moved": 8683520.0,
+        "intensity_flops_per_byte": 7.728301886792453
+      },
+      {
+        "B": 4,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16_marlin",
+        "seconds": 2.2016000002622604e-05,
+        "flops_per_s": 6096372092297.04,
+        "bytes_moved": 8716288.0,
+        "intensity_flops_per_byte": 15.398496240601503
+      },
+      {
+        "B": 8,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16_marlin",
+        "seconds": 2.1983999758958816e-05,
+        "flops_per_s": 12210492128058.201,
+        "bytes_moved": 8781824.0,
+        "intensity_flops_per_byte": 30.567164179104477
+      },
+      {
+        "B": 16,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16_marlin",
+        "seconds": 2.4000000208616257e-05,
+        "flops_per_s": 22369621138888.89,
+        "bytes_moved": 8912896.0,
+        "intensity_flops_per_byte": 60.23529411764706
+      },
+      {
+        "B": 32,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16_marlin",
+        "seconds": 3.014400042593479e-05,
+        "flops_per_s": 35620415632564.55,
+        "bytes_moved": 9175040.0,
+        "intensity_flops_per_byte": 117.02857142857142
+      },
+      {
+        "B": 64,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16_marlin",
+        "seconds": 4.323200136423111e-05,
+        "flops_per_s": 49673472895861.93,
+        "bytes_moved": 9699328.0,
+        "intensity_flops_per_byte": 221.40540540540542
+      },
+      {
+        "B": 128,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16_marlin",
+        "seconds": 6.496000289916992e-05,
+        "flops_per_s": 66117104438350.98,
+        "bytes_moved": 10747904.0,
+        "intensity_flops_per_byte": 399.609756097561
+      },
+      {
+        "B": 256,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16_marlin",
+        "seconds": 0.00011212799698114396,
+        "flops_per_s": 76608294299991.19,
+        "bytes_moved": 12845056.0,
+        "intensity_flops_per_byte": 668.734693877551
+      },
+      {
+        "B": 384,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16_marlin",
+        "seconds": 0.00015305599570274354,
+        "flops_per_s": 84184234853656.48,
+        "bytes_moved": 14942208.0,
+        "intensity_flops_per_byte": 862.3157894736842
+      },
+      {
+        "B": 512,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16_marlin",
+        "seconds": 0.00020502400398254394,
+        "flops_per_s": 83794428214672.47,
+        "bytes_moved": 17039360.0,
+        "intensity_flops_per_byte": 1008.2461538461539
+      },
+      {
+        "B": 768,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16_marlin",
+        "seconds": 0.00029238399863243104,
+        "flops_per_s": 88136847079639.16,
+        "bytes_moved": 21233664.0,
+        "intensity_flops_per_byte": 1213.6296296296296
+      },
+      {
+        "B": 1024,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16_marlin",
+        "seconds": 0.0003967359960079193,
+        "flops_per_s": 86606052170053.5,
+        "bytes_moved": 25427968.0,
+        "intensity_flops_per_byte": 1351.2577319587629
+      },
+      {
+        "B": 1536,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16_marlin",
+        "seconds": 0.0005708799958229065,
+        "flops_per_s": 90280983620221.61,
+        "bytes_moved": 33816576.0,
+        "intensity_flops_per_byte": 1524.093023255814
+      },
+      {
+        "B": 2048,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16_marlin",
+        "seconds": 0.0007678400278091431,
+        "flops_per_s": 89497127327518.2,
+        "bytes_moved": 42205184.0,
+        "intensity_flops_per_byte": 1628.223602484472
+      },
+      {
+        "B": 3072,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16_marlin",
+        "seconds": 0.0011197760105133056,
+        "flops_per_s": 92053423306281.11,
+        "bytes_moved": 58982400.0,
+        "intensity_flops_per_byte": 1747.6266666666668
+      },
+      {
+        "B": 4096,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16_marlin",
+        "seconds": 0.0014924800395965576,
+        "flops_per_s": 92087632548273.17,
+        "bytes_moved": 75759616.0,
+        "intensity_flops_per_byte": 1814.1453287197232
+      },
+      {
+        "B": 6144,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16_marlin",
+        "seconds": 0.0022152960300445557,
+        "flops_per_s": 93061345938426.83,
+        "bytes_moved": 109314048.0,
+        "intensity_flops_per_byte": 1885.928057553957
+      },
+      {
+        "B": 8192,
+        "D": 4096,
+        "F": 4096,
+        "kernel": "w4a16_marlin",
+        "seconds": 0.002972800016403198,
+        "flops_per_s": 92464311567306.78,
+        "bytes_moved": 142868480.0,
+        "intensity_flops_per_byte": 1923.9926605504588
+      }
+    ],
+    "D1024_F1024_bf16": [
+      {
+        "B": 1,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "bf16",
+        "seconds": 9.088000282645225e-06,
+        "flops_per_s": 230760556203.41446,
+        "bytes_moved": 2101248,
+        "intensity_flops_per_byte": 0.9980506822612085
+      },
+      {
+        "B": 2,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "bf16",
+        "seconds": 1.3088000006973743e-05,
+        "flops_per_s": 320469437482.05444,
+        "bytes_moved": 2105344,
+        "intensity_flops_per_byte": 1.9922178988326849
+      },
+      {
+        "B": 4,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "bf16",
+        "seconds": 1.360000018030405e-05,
+        "flops_per_s": 616809403587.2622,
+        "bytes_moved": 2113536,
+        "intensity_flops_per_byte": 3.9689922480620154
+      },
+      {
+        "B": 8,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "bf16",
+        "seconds": 1.2864000163972378e-05,
+        "flops_per_s": 1304198988351.0098,
+        "bytes_moved": 2129920,
+        "intensity_flops_per_byte": 7.876923076923077
+      },
+      {
+        "B": 16,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "bf16",
+        "seconds": 1.283199992030859e-05,
+        "flops_per_s": 2614902759381.6465,
+        "bytes_moved": 2162688,
+        "intensity_flops_per_byte": 15.515151515151516
+      },
+      {
+        "B": 32,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "bf16",
+        "seconds": 1.2671999633312225e-05,
+        "flops_per_s": 5295838537083.274,
+        "bytes_moved": 2228224,
+        "intensity_flops_per_byte": 30.11764705882353
+      },
+      {
+        "B": 64,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "bf16",
+        "seconds": 1.2608000077307224e-05,
+        "flops_per_s": 10645441559091.883,
+        "bytes_moved": 2359296,
+        "intensity_flops_per_byte": 56.888888888888886
+      },
+      {
+        "B": 128,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "bf16",
+        "seconds": 1.4655999839305878e-05,
+        "flops_per_s": 18315738192087.3,
+        "bytes_moved": 2621440,
+        "intensity_flops_per_byte": 102.4
+      },
+      {
+        "B": 256,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "bf16",
+        "seconds": 2.300800010561943e-05,
+        "flops_per_s": 23334097250324.496,
+        "bytes_moved": 3145728,
+        "intensity_flops_per_byte": 170.66666666666666
+      },
+      {
+        "B": 384,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "bf16",
+        "seconds": 2.5056000798940658e-05,
+        "flops_per_s": 32140259511567.684,
+        "bytes_moved": 3670016,
+        "intensity_flops_per_byte": 219.42857142857142
+      },
+      {
+        "B": 512,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "bf16",
+        "seconds": 2.800000086426735e-05,
+        "flops_per_s": 38347921102040.85,
+        "bytes_moved": 4194304,
+        "intensity_flops_per_byte": 256.0
+      },
+      {
+        "B": 768,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "bf16",
+        "seconds": 2.611199952661991e-05,
+        "flops_per_s": 61680942294674.09,
+        "bytes_moved": 5242880,
+        "intensity_flops_per_byte": 307.2
+      },
+      {
+        "B": 1024,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "bf16",
+        "seconds": 3.7376001477241516e-05,
+        "flops_per_s": 57456216907194.22,
+        "bytes_moved": 6291456,
+        "intensity_flops_per_byte": 341.3333333333333
+      },
+      {
+        "B": 1536,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "bf16",
+        "seconds": 3.9551999419927596e-05,
+        "flops_per_s": 81442797310950.62,
+        "bytes_moved": 8388608,
+        "intensity_flops_per_byte": 384.0
+      },
+      {
+        "B": 2048,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "bf16",
+        "seconds": 5.990400165319443e-05,
+        "flops_per_s": 71697502294839.89,
+        "bytes_moved": 10485760,
+        "intensity_flops_per_byte": 409.6
+      },
+      {
+        "B": 3072,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "bf16",
+        "seconds": 7.423999905586243e-05,
+        "flops_per_s": 86778704551872.78,
+        "bytes_moved": 14680064,
+        "intensity_flops_per_byte": 438.85714285714283
+      },
+      {
+        "B": 4096,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "bf16",
+        "seconds": 0.00011116799712181092,
+        "flops_per_s": 77269851165778.3,
+        "bytes_moved": 18874368,
+        "intensity_flops_per_byte": 455.1111111111111
+      },
+      {
+        "B": 6144,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "bf16",
+        "seconds": 0.00015798400342464448,
+        "flops_per_s": 81558269246834.64,
+        "bytes_moved": 27262976,
+        "intensity_flops_per_byte": 472.61538461538464
+      },
+      {
+        "B": 8192,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "bf16",
+        "seconds": 0.00023206399381160735,
+        "flops_per_s": 74030739977468.66,
+        "bytes_moved": 35651584,
+        "intensity_flops_per_byte": 481.88235294117646
+      }
+    ],
+    "D1024_F1024_fp16": [
+      {
+        "B": 1,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp16",
+        "seconds": 9.02399979531765e-06,
+        "flops_per_s": 232397168391.7995,
+        "bytes_moved": 2101248,
+        "intensity_flops_per_byte": 0.9980506822612085
+      },
+      {
+        "B": 2,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp16",
+        "seconds": 1.0879999957978725e-05,
+        "flops_per_s": 385505883841.8611,
+        "bytes_moved": 2105344,
+        "intensity_flops_per_byte": 1.9922178988326849
+      },
+      {
+        "B": 4,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp16",
+        "seconds": 1.0879999957978725e-05,
+        "flops_per_s": 771011767683.7222,
+        "bytes_moved": 2113536,
+        "intensity_flops_per_byte": 3.9689922480620154
+      },
+      {
+        "B": 8,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp16",
+        "seconds": 1.0816000401973725e-05,
+        "flops_per_s": 1551147871346.0903,
+        "bytes_moved": 2129920,
+        "intensity_flops_per_byte": 7.876923076923077
+      },
+      {
+        "B": 16,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp16",
+        "seconds": 1.0816000401973725e-05,
+        "flops_per_s": 3102295742692.1807,
+        "bytes_moved": 2162688,
+        "intensity_flops_per_byte": 15.515151515151516
+      },
+      {
+        "B": 32,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp16",
+        "seconds": 1.3824000023305415e-05,
+        "flops_per_s": 4854518510334.449,
+        "bytes_moved": 2228224,
+        "intensity_flops_per_byte": 30.11764705882353
+      },
+      {
+        "B": 64,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp16",
+        "seconds": 1.369599997997284e-05,
+        "flops_per_s": 9799775715264.434,
+        "bytes_moved": 2359296,
+        "intensity_flops_per_byte": 56.888888888888886
+      },
+      {
+        "B": 128,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp16",
+        "seconds": 1.5039999969303607e-05,
+        "flops_per_s": 17848102164087.258,
+        "bytes_moved": 2621440,
+        "intensity_flops_per_byte": 102.4
+      },
+      {
+        "B": 256,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp16",
+        "seconds": 2.3040000349283217e-05,
+        "flops_per_s": 23301688535638.508,
+        "bytes_moved": 3145728,
+        "intensity_flops_per_byte": 170.66666666666666
+      },
+      {
+        "B": 384,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp16",
+        "seconds": 2.5183999910950662e-05,
+        "flops_per_s": 31976904814466.414,
+        "bytes_moved": 3670016,
+        "intensity_flops_per_byte": 219.42857142857142
+      },
+      {
+        "B": 512,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp16",
+        "seconds": 2.5248000398278235e-05,
+        "flops_per_s": 42527796540799.44,
+        "bytes_moved": 4194304,
+        "intensity_flops_per_byte": 256.0
+      },
+      {
+        "B": 768,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp16",
+        "seconds": 2.6143999770283698e-05,
+        "flops_per_s": 61605444849746.59,
+        "bytes_moved": 5242880,
+        "intensity_flops_per_byte": 307.2
+      },
+      {
+        "B": 1024,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp16",
+        "seconds": 3.942399844527245e-05,
+        "flops_per_s": 54471482667621.625,
+        "bytes_moved": 6291456,
+        "intensity_flops_per_byte": 341.3333333333333
+      },
+      {
+        "B": 1536,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp16",
+        "seconds": 4.1439998894929886e-05,
+        "flops_per_s": 77732276976342.1,
+        "bytes_moved": 8388608,
+        "intensity_flops_per_byte": 384.0
+      },
+      {
+        "B": 2048,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp16",
+        "seconds": 5.9999998658895494e-05,
+        "flops_per_s": 71582789866666.7,
+        "bytes_moved": 10485760,
+        "intensity_flops_per_byte": 409.6
+      },
+      {
+        "B": 3072,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp16",
+        "seconds": 7.635200023651123e-05,
+        "flops_per_s": 84378286410881.03,
+        "bytes_moved": 14680064,
+        "intensity_flops_per_byte": 438.85714285714283
+      },
+      {
+        "B": 4096,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp16",
+        "seconds": 0.000113087996840477,
+        "flops_per_s": 75957969298165.6,
+        "bytes_moved": 18874368,
+        "intensity_flops_per_byte": 455.1111111111111
+      },
+      {
+        "B": 6144,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp16",
+        "seconds": 0.00015936000645160674,
+        "flops_per_s": 80854049738714.03,
+        "bytes_moved": 27262976,
+        "intensity_flops_per_byte": 472.61538461538464
+      },
+      {
+        "B": 8192,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp16",
+        "seconds": 0.00023503999412059784,
+        "flops_per_s": 73093386716071.38,
+        "bytes_moved": 35651584,
+        "intensity_flops_per_byte": 481.88235294117646
+      }
+    ],
+    "D1024_F1024_fp8_e4m3": [
+      {
+        "B": 1,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp8_e4m3",
+        "seconds": 1.3919999822974206e-05,
+        "flops_per_s": 150657473180.3347,
+        "bytes_moved": 1051648,
+        "intensity_flops_per_byte": 1.994157740993184
+      },
+      {
+        "B": 2,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp8_e4m3",
+        "seconds": 1.4751999638974667e-05,
+        "flops_per_s": 284321048172.93256,
+        "bytes_moved": 1054720,
+        "intensity_flops_per_byte": 3.9766990291262134
+      },
+      {
+        "B": 4,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp8_e4m3",
+        "seconds": 1.2768000364303589e-05,
+        "flops_per_s": 657002487519.7084,
+        "bytes_moved": 1060864,
+        "intensity_flops_per_byte": 7.9073359073359075
+      },
+      {
+        "B": 8,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp8_e4m3",
+        "seconds": 1.3856000266969204e-05,
+        "flops_per_s": 1210826766508.844,
+        "bytes_moved": 1073152,
+        "intensity_flops_per_byte": 15.633587786259541
+      },
+      {
+        "B": 16,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp8_e4m3",
+        "seconds": 1.2896000407636166e-05,
+        "flops_per_s": 2601925476067.081,
+        "bytes_moved": 1097728,
+        "intensity_flops_per_byte": 30.567164179104477
+      },
+      {
+        "B": 32,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp8_e4m3",
+        "seconds": 1.2512000277638435e-05,
+        "flops_per_s": 5363559983285.614,
+        "bytes_moved": 1146880,
+        "intensity_flops_per_byte": 58.51428571428571
+      },
+      {
+        "B": 64,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp8_e4m3",
+        "seconds": 1.27360001206398e-05,
+        "flops_per_s": 10538452161482.666,
+        "bytes_moved": 1245184,
+        "intensity_flops_per_byte": 107.78947368421052
+      },
+      {
+        "B": 128,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp8_e4m3",
+        "seconds": 1.3887999579310417e-05,
+        "flops_per_s": 19328590447244.863,
+        "bytes_moved": 1441792,
+        "intensity_flops_per_byte": 186.1818181818182
+      },
+      {
+        "B": 256,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp8_e4m3",
+        "seconds": 1.9999999552965164e-05,
+        "flops_per_s": 26843546200000.016,
+        "bytes_moved": 1835008,
+        "intensity_flops_per_byte": 292.57142857142856
+      },
+      {
+        "B": 384,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp8_e4m3",
+        "seconds": 2.2016000002622604e-05,
+        "flops_per_s": 36578232553782.24,
+        "bytes_moved": 2228224,
+        "intensity_flops_per_byte": 361.4117647058824
+      },
+      {
+        "B": 512,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp8_e4m3",
+        "seconds": 2.208000048995018e-05,
+        "flops_per_s": 48629610515122.9,
+        "bytes_moved": 2621440,
+        "intensity_flops_per_byte": 409.6
+      },
+      {
+        "B": 768,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp8_e4m3",
+        "seconds": 2.4960000067949296e-05,
+        "flops_per_s": 64527753670488.164,
+        "bytes_moved": 3407872,
+        "intensity_flops_per_byte": 472.61538461538464
+      },
+      {
+        "B": 1024,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp8_e4m3",
+        "seconds": 2.876799926161766e-05,
+        "flops_per_s": 74648348968264.14,
+        "bytes_moved": 4194304,
+        "intensity_flops_per_byte": 512.0
+      },
+      {
+        "B": 1536,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp8_e4m3",
+        "seconds": 2.9983999207615853e-05,
+        "flops_per_s": 107431482027981.7,
+        "bytes_moved": 5767168,
+        "intensity_flops_per_byte": 558.5454545454545
+      },
+      {
+        "B": 2048,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp8_e4m3",
+        "seconds": 3.724800050258636e-05,
+        "flops_per_s": 115307324904642.16,
+        "bytes_moved": 7340032,
+        "intensity_flops_per_byte": 585.1428571428571
+      },
+      {
+        "B": 3072,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp8_e4m3",
+        "seconds": 4.7520000487565994e-05,
+        "flops_per_s": 135573461235248.12,
+        "bytes_moved": 10485760,
+        "intensity_flops_per_byte": 614.4
+      },
+      {
+        "B": 4096,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp8_e4m3",
+        "seconds": 6.387200206518173e-05,
+        "flops_per_s": 134486697054429.66,
+        "bytes_moved": 13631488,
+        "intensity_flops_per_byte": 630.1538461538462
+      },
+      {
+        "B": 6144,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp8_e4m3",
+        "seconds": 9.212800115346908e-05,
+        "flops_per_s": 139858693629269.3,
+        "bytes_moved": 19922944,
+        "intensity_flops_per_byte": 646.7368421052631
+      },
+      {
+        "B": 8192,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "fp8_e4m3",
+        "seconds": 0.00013705599308013917,
+        "flops_per_s": 125349273664775.92,
+        "bytes_moved": 26214400,
+        "intensity_flops_per_byte": 655.36
+      }
+    ],
+    "D1024_F1024_int8": [
+      {
+        "B": 32,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "int8",
+        "seconds": 1.2992000207304955e-05,
+        "flops_per_s": 5165398932357.39,
+        "bytes_moved": 1212416,
+        "intensity_flops_per_byte": 55.351351351351354
+      },
+      {
+        "B": 64,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "int8",
+        "seconds": 1.3024000450968743e-05,
+        "flops_per_s": 10305414876580.16,
+        "bytes_moved": 1376256,
+        "intensity_flops_per_byte": 97.52380952380952
+      },
+      {
+        "B": 128,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "int8",
+        "seconds": 1.3024000450968743e-05,
+        "flops_per_s": 20610829753160.32,
+        "bytes_moved": 1703936,
+        "intensity_flops_per_byte": 157.53846153846155
+      },
+      {
+        "B": 256,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "int8",
+        "seconds": 1.2992000207304955e-05,
+        "flops_per_s": 41323191458859.12,
+        "bytes_moved": 2359296,
+        "intensity_flops_per_byte": 227.55555555555554
+      },
+      {
+        "B": 384,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "int8",
+        "seconds": 1.3952000066637992e-05,
+        "flops_per_s": 57719779540830.69,
+        "bytes_moved": 3014656,
+        "intensity_flops_per_byte": 267.1304347826087
+      },
+      {
+        "B": 512,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "int8",
+        "seconds": 1.9999999552965164e-05,
+        "flops_per_s": 53687092400000.03,
+        "bytes_moved": 3670016,
+        "intensity_flops_per_byte": 292.57142857142856
+      },
+      {
+        "B": 768,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "int8",
+        "seconds": 2.2016000002622604e-05,
+        "flops_per_s": 73156465107564.48,
+        "bytes_moved": 4980736,
+        "intensity_flops_per_byte": 323.36842105263156
+      },
+      {
+        "B": 1024,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "int8",
+        "seconds": 2.812799997627735e-05,
+        "flops_per_s": 76346830553581.81,
+        "bytes_moved": 6291456,
+        "intensity_flops_per_byte": 341.3333333333333
+      },
+      {
+        "B": 1536,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "int8",
+        "seconds": 3.632000088691711e-05,
+        "flops_per_s": 88690126468590.56,
+        "bytes_moved": 8912896,
+        "intensity_flops_per_byte": 361.4117647058824
+      },
+      {
+        "B": 2048,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "int8",
+        "seconds": 4.848000034689903e-05,
+        "flops_per_s": 88592559102048.83,
+        "bytes_moved": 11534336,
+        "intensity_flops_per_byte": 372.3636363636364
+      },
+      {
+        "B": 3072,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "int8",
+        "seconds": 7.539200037717819e-05,
+        "flops_per_s": 85452712645494.23,
+        "bytes_moved": 16777216,
+        "intensity_flops_per_byte": 384.0
+      },
+      {
+        "B": 4096,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "int8",
+        "seconds": 0.00010988800227642059,
+        "flops_per_s": 78169904030034.4,
+        "bytes_moved": 22020096,
+        "intensity_flops_per_byte": 390.0952380952381
+      },
+      {
+        "B": 6144,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "int8",
+        "seconds": 0.0001712000072002411,
+        "flops_per_s": 75262274217835.75,
+        "bytes_moved": 32505856,
+        "intensity_flops_per_byte": 396.38709677419354
+      },
+      {
+        "B": 8192,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "int8",
+        "seconds": 0.00022889600694179534,
+        "flops_per_s": 75055346808075.03,
+        "bytes_moved": 42991616,
+        "intensity_flops_per_byte": 399.609756097561
+      }
+    ],
+    "D1024_F1024_w4a16": [
+      {
+        "B": 1,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16",
+        "seconds": 8.864000439643859e-06,
+        "flops_per_s": 236592046027.0487,
+        "bytes_moved": 561152.0,
+        "intensity_flops_per_byte": 3.7372262773722627
+      },
+      {
+        "B": 2,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16",
+        "seconds": 8.895999751985073e-06,
+        "flops_per_s": 471482027533.11383,
+        "bytes_moved": 565248.0,
+        "intensity_flops_per_byte": 7.420289855072464
+      },
+      {
+        "B": 4,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16",
+        "seconds": 9.088000282645225e-06,
+        "flops_per_s": 923042224813.6578,
+        "bytes_moved": 573440.0,
+        "intensity_flops_per_byte": 14.628571428571428
+      },
+      {
+        "B": 8,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16",
+        "seconds": 8.96000023931265e-06,
+        "flops_per_s": 1872457092845.6843,
+        "bytes_moved": 589824.0,
+        "intensity_flops_per_byte": 28.444444444444443
+      },
+      {
+        "B": 16,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16",
+        "seconds": 8.895999751985073e-06,
+        "flops_per_s": 3771856220264.9106,
+        "bytes_moved": 622592.0,
+        "intensity_flops_per_byte": 53.89473684210526
+      },
+      {
+        "B": 32,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16",
+        "seconds": 1.2896000407636166e-05,
+        "flops_per_s": 5203850952134.162,
+        "bytes_moved": 688128.0,
+        "intensity_flops_per_byte": 97.52380952380952
+      },
+      {
+        "B": 64,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16",
+        "seconds": 1.8912000581622124e-05,
+        "flops_per_s": 7096960864649.458,
+        "bytes_moved": 819200.0,
+        "intensity_flops_per_byte": 163.84
+      },
+      {
+        "B": 128,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16",
+        "seconds": 2.9184000566601752e-05,
+        "flops_per_s": 9198034909141.219,
+        "bytes_moved": 1081344.0,
+        "intensity_flops_per_byte": 248.24242424242425
+      },
+      {
+        "B": 256,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16",
+        "seconds": 4.972799867391586e-05,
+        "flops_per_s": 10796149580047.512,
+        "bytes_moved": 1605632.0,
+        "intensity_flops_per_byte": 334.3673469387755
+      },
+      {
+        "B": 384,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16",
+        "seconds": 7.007999718189239e-05,
+        "flops_per_s": 11491244297710.66,
+        "bytes_moved": 2129920.0,
+        "intensity_flops_per_byte": 378.0923076923077
+      },
+      {
+        "B": 512,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16",
+        "seconds": 8.867199718952178e-05,
+        "flops_per_s": 12109142209857.457,
+        "bytes_moved": 2654208.0,
+        "intensity_flops_per_byte": 404.5432098765432
+      },
+      {
+        "B": 768,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16",
+        "seconds": 0.00012956799566745758,
+        "flops_per_s": 12430637116080.07,
+        "bytes_moved": 3702784.0,
+        "intensity_flops_per_byte": 434.9734513274336
+      },
+      {
+        "B": 1024,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16",
+        "seconds": 0.00016867199540138245,
+        "flops_per_s": 12731714253392.885,
+        "bytes_moved": 4751360.0,
+        "intensity_flops_per_byte": 451.97241379310344
+      },
+      {
+        "B": 1536,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16",
+        "seconds": 0.00025040000677108767,
+        "flops_per_s": 12864318629770.65,
+        "bytes_moved": 6848512.0,
+        "intensity_flops_per_byte": 470.35406698564594
+      },
+      {
+        "B": 2048,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16",
+        "seconds": 0.0003303360044956207,
+        "flops_per_s": 13001814024353.312,
+        "bytes_moved": 8945664.0,
+        "intensity_flops_per_byte": 480.1172161172161
+      },
+      {
+        "B": 3072,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16",
+        "seconds": 0.0004920960068702698,
+        "flops_per_s": 13091857796152.387,
+        "bytes_moved": 13139968.0,
+        "intensity_flops_per_byte": 490.2942643391521
+      },
+      {
+        "B": 4096,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16",
+        "seconds": 0.000653823971748352,
+        "flops_per_s": 13137992736837.354,
+        "bytes_moved": 17334272.0,
+        "intensity_flops_per_byte": 495.54631379962194
+      },
+      {
+        "B": 6144,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16",
+        "seconds": 0.0009756799936294555,
+        "flops_per_s": 13206073684127.87,
+        "bytes_moved": 25722880.0,
+        "intensity_flops_per_byte": 500.912101910828
+      },
+      {
+        "B": 8192,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16",
+        "seconds": 0.0012990080118179322,
+        "flops_per_s": 13225375846571.695,
+        "bytes_moved": 34111488.0,
+        "intensity_flops_per_byte": 503.6388088376561
+      }
+    ],
+    "D1024_F1024_w4a16_marlin": [
+      {
+        "B": 1,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16_marlin",
+        "seconds": 1.5936000272631647e-05,
+        "flops_per_s": 131598391322.92381,
+        "bytes_moved": 544768.0,
+        "intensity_flops_per_byte": 3.8496240601503757
+      },
+      {
+        "B": 2,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16_marlin",
+        "seconds": 1.596800051629543e-05,
+        "flops_per_s": 262669330184.43292,
+        "bytes_moved": 548864.0,
+        "intensity_flops_per_byte": 7.641791044776119
+      },
+      {
+        "B": 4,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16_marlin",
+        "seconds": 1.5807999297976493e-05,
+        "flops_per_s": 530655894011.44434,
+        "bytes_moved": 557056.0,
+        "intensity_flops_per_byte": 15.058823529411764
+      },
+      {
+        "B": 8,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16_marlin",
+        "seconds": 1.5936000272631647e-05,
+        "flops_per_s": 1052787130583.3905,
+        "bytes_moved": 573440.0,
+        "intensity_flops_per_byte": 29.257142857142856
+      },
+      {
+        "B": 16,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16_marlin",
+        "seconds": 1.5936000272631647e-05,
+        "flops_per_s": 2105574261166.781,
+        "bytes_moved": 606208.0,
+        "intensity_flops_per_byte": 55.351351351351354
+      },
+      {
+        "B": 32,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16_marlin",
+        "seconds": 1.788800023496151e-05,
+        "flops_per_s": 3751613546428.6235,
+        "bytes_moved": 671744.0,
+        "intensity_flops_per_byte": 99.90243902439025
+      },
+      {
+        "B": 64,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16_marlin",
+        "seconds": 2.0031999796628952e-05,
+        "flops_per_s": 6700166202207.459,
+        "bytes_moved": 802816.0,
+        "intensity_flops_per_byte": 167.18367346938774
+      },
+      {
+        "B": 128,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16_marlin",
+        "seconds": 2.211200073361397e-05,
+        "flops_per_s": 12139808569738.912,
+        "bytes_moved": 1064960.0,
+        "intensity_flops_per_byte": 252.06153846153848
+      },
+      {
+        "B": 256,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16_marlin",
+        "seconds": 2.6176000013947487e-05,
+        "flops_per_s": 20510043998851.484,
+        "bytes_moved": 1589248.0,
+        "intensity_flops_per_byte": 337.8144329896907
+      },
+      {
+        "B": 384,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16_marlin",
+        "seconds": 2.6143999770283698e-05,
+        "flops_per_s": 30802722424873.297,
+        "bytes_moved": 2113536.0,
+        "intensity_flops_per_byte": 381.0232558139535
+      },
+      {
+        "B": 512,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16_marlin",
+        "seconds": 3.030399978160858e-05,
+        "flops_per_s": 35432346612266.38,
+        "bytes_moved": 2637824.0,
+        "intensity_flops_per_byte": 407.055900621118
+      },
+      {
+        "B": 768,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16_marlin",
+        "seconds": 3.219199925661087e-05,
+        "flops_per_s": 50031460399877.1,
+        "bytes_moved": 3686400.0,
+        "intensity_flops_per_byte": 436.9066666666667
+      },
+      {
+        "B": 1024,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16_marlin",
+        "seconds": 4.444799944758415e-05,
+        "flops_per_s": 48314517519116.836,
+        "bytes_moved": 4734976.0,
+        "intensity_flops_per_byte": 453.5363321799308
+      },
+      {
+        "B": 1536,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16_marlin",
+        "seconds": 5.260799825191498e-05,
+        "flops_per_s": 61230717363072.15,
+        "bytes_moved": 6832128.0,
+        "intensity_flops_per_byte": 471.48201438848923
+      },
+      {
+        "B": 2048,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16_marlin",
+        "seconds": 7.184000313282012e-05,
+        "flops_per_s": 59785176902892.46,
+        "bytes_moved": 8929280.0,
+        "intensity_flops_per_byte": 480.9981651376147
+      },
+      {
+        "B": 3072,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16_marlin",
+        "seconds": 9.174399822950363e-05,
+        "flops_per_s": 70222042513165.67,
+        "bytes_moved": 13123584.0,
+        "intensity_flops_per_byte": 490.9063670411985
+      },
+      {
+        "B": 4096,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16_marlin",
+        "seconds": 0.00012435200065374373,
+        "flops_per_s": 69077574521044.84,
+        "bytes_moved": 17317888.0,
+        "intensity_flops_per_byte": 496.0151371807001
+      },
+      {
+        "B": 6144,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16_marlin",
+        "seconds": 0.00017535999417304991,
+        "flops_per_s": 73476860835686.6,
+        "bytes_moved": 25706496.0,
+        "intensity_flops_per_byte": 501.23135755258124
+      },
+      {
+        "B": 8192,
+        "D": 1024,
+        "F": 1024,
+        "kernel": "w4a16_marlin",
+        "seconds": 0.000244159996509552,
+        "flops_per_s": 70363161163167.414,
+        "bytes_moved": 34095104.0,
+        "intensity_flops_per_byte": 503.8808265257088
+      }
+    ]
+  }
+}
