@@ -21,19 +21,22 @@ run_in_container() {
     "${@:2}"
 }
 
-echo "[1/3] measuring attention sweeps..."
+echo "[1/4] measuring attention sweeps..."
 run_in_container python3 measure_attention.py
 
-echo "[2/3] comparing decode kernels..."
+echo "[2/4] comparing decode kernels..."
 run_in_container python3 compare_decode_kernels.py
 
-echo "[3/3] plotting..."
+echo "[3/4] GQA ratio sweep..."
+run_in_container python3 measure_gqa_sweep.py
+
+echo "[4/4] plotting..."
 sudo docker run --gpus all --rm \
   -v "$REPO_ROOT":/work \
   -w /work/prefill-vs-decode \
   --entrypoint bash \
   "$IMAGE" \
-  -c "pip install --quiet --root-user-action=ignore matplotlib && python3 plot_attention.py"
+  -c "pip install --quiet --root-user-action=ignore matplotlib && python3 plot_attention.py && python3 plot_gqa.py"
 
 echo
 echo "done. results in: $PWD/results/"
