@@ -24,6 +24,7 @@ These are **not apples-to-apples** — vLLM carries 4× more data per token. The
 - [`EXPERIMENT.md`](EXPERIMENT.md) — test methodology
 - [`RESULTS.md`](RESULTS.md) — single-request & concurrent throughput numbers
 - [`KV_CACHE.md`](KV_CACHE.md) — how each framework manages memory under load
+- [`CLEANUP.md`](CLEANUP.md) — disk usage sources and how to reclaim space
 
 ## Scripts
 
