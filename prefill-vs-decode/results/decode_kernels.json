@@ -1,0 +1,182 @@
+{
+  "device": "NVIDIA GB10",
+  "torch": "2.10.0+cu130",
+  "timestamp": 1779281281.9861276,
+  "peak_bw_gb_per_s": 213.0,
+  "variants": {
+    "sdpa_manual_expand": [
+      {
+        "variant": "sdpa_manual_expand",
+        "B": 1,
+        "S": 4096,
+        "seconds": 0.0002608959972858429,
+        "bytes_moved_gqa": 16793600,
+        "flops": 67108864,
+        "gb_per_s": 64.36894461665732,
+        "tflops_per_s": 0.25722458258519837,
+        "intensity_flops_per_byte": 3.9960975609756098
+      },
+      {
+        "variant": "sdpa_manual_expand",
+        "B": 8,
+        "S": 4096,
+        "seconds": 0.0021943678855895995,
+        "bytes_moved_gqa": 134348800,
+        "flops": 536870912,
+        "gb_per_s": 61.22437394489217,
+        "tflops_per_s": 0.24465857139344227,
+        "intensity_flops_per_byte": 3.9960975609756098
+      },
+      {
+        "variant": "sdpa_manual_expand",
+        "B": 32,
+        "S": 4096,
+        "seconds": 0.008851455688476563,
+        "bytes_moved_gqa": 537395200,
+        "flops": 2147483648,
+        "gb_per_s": 60.71263517701594,
+        "tflops_per_s": 0.2426136133512754,
+        "intensity_flops_per_byte": 3.9960975609756098
+      },
+      {
+        "variant": "sdpa_manual_expand",
+        "B": 128,
+        "S": 4096,
+        "seconds": 0.035504959106445313,
+        "bytes_moved_gqa": 2149580800,
+        "flops": 8589934592,
+        "gb_per_s": 60.543114373275834,
+        "tflops_per_s": 0.24193619168091496,
+        "intensity_flops_per_byte": 3.9960975609756098
+      },
+      {
+        "variant": "sdpa_manual_expand",
+        "B": 1,
+        "S": 16384,
+        "seconds": 0.0011278079748153686,
+        "bytes_moved_gqa": 67125248,
+        "flops": 268435456,
+        "gb_per_s": 59.51833069010613,
+        "tflops_per_s": 0.23801521357742225,
+        "intensity_flops_per_byte": 3.9990236758603857
+      },
+      {
+        "variant": "sdpa_manual_expand",
+        "B": 8,
+        "S": 16384,
+        "seconds": 0.008896127700805664,
+        "bytes_moved_gqa": 537001984,
+        "flops": 2147483648,
+        "gb_per_s": 60.363565144345586,
+        "tflops_per_s": 0.24139532617157874,
+        "intensity_flops_per_byte": 3.9990236758603857
+      }
+    ],
+    "sdpa_native_gqa": [
+      {
+        "variant": "sdpa_native_gqa",
+        "B": 1,
+        "S": 4096,
+        "seconds": 3.590400144457817e-05,
+        "bytes_moved_gqa": 16793600,
+        "flops": 67108864,
+        "gb_per_s": 467.7361665641306,
+        "tflops_per_s": 1.869119354387004,
+        "intensity_flops_per_byte": 3.9960975609756098
+      },
+      {
+        "variant": "sdpa_native_gqa",
+        "B": 8,
+        "S": 4096,
+        "seconds": 0.0005756160020828247,
+        "bytes_moved_gqa": 134348800,
+        "flops": 536870912,
+        "gb_per_s": 233.4000436295527,
+        "tflops_per_s": 0.9326893450796565,
+        "intensity_flops_per_byte": 3.9960975609756098
+      },
+      {
+        "variant": "sdpa_native_gqa",
+        "B": 32,
+        "S": 4096,
+        "seconds": 0.002242271900177002,
+        "bytes_moved_gqa": 537395200,
+        "flops": 2147483648,
+        "gb_per_s": 239.66549282340767,
+        "tflops_per_s": 0.957726691321637,
+        "intensity_flops_per_byte": 3.9960975609756098
+      },
+      {
+        "variant": "sdpa_native_gqa",
+        "B": 128,
+        "S": 4096,
+        "seconds": 0.008890336036682128,
+        "bytes_moved_gqa": 2149580800,
+        "flops": 8589934592,
+        "gb_per_s": 241.78847583833547,
+        "tflops_per_s": 0.9662103385695825,
+        "intensity_flops_per_byte": 3.9960975609756098
+      },
+      {
+        "variant": "sdpa_native_gqa",
+        "B": 1,
+        "S": 16384,
+        "seconds": 0.00029929599165916444,
+        "bytes_moved_gqa": 67125248,
+        "flops": 268435456,
+        "gb_per_s": 224.2771365827098,
+        "tflops_per_s": 0.8968895791484299,
+        "intensity_flops_per_byte": 3.9990236758603857
+      },
+      {
+        "variant": "sdpa_native_gqa",
+        "B": 8,
+        "S": 16384,
+        "seconds": 0.0022302720546722413,
+        "bytes_moved_gqa": 537001984,
+        "flops": 2147483648,
+        "gb_per_s": 240.7786901490443,
+        "tflops_per_s": 0.9628796825486801,
+        "intensity_flops_per_byte": 3.9990236758603857
+      }
+    ],
+    "flash_attn_kvcache": [
+      {
+        "variant": "flash_attn_kvcache",
+        "B": 1,
+        "S": 4096,
+        "error": "setup: ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      {
+        "variant": "flash_attn_kvcache",
+        "B": 8,
+        "S": 4096,
+        "error": "setup: ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      {
+        "variant": "flash_attn_kvcache",
+        "B": 32,
+        "S": 4096,
+        "error": "setup: ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      {
+        "variant": "flash_attn_kvcache",
+        "B": 128,
+        "S": 4096,
+        "error": "setup: ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      {
+        "variant": "flash_attn_kvcache",
+        "B": 1,
+        "S": 16384,
+        "error": "setup: ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      {
+        "variant": "flash_attn_kvcache",
+        "B": 8,
+        "S": 16384,
+        "error": "setup: ModuleNotFoundError: No module named 'flash_attn'"
+      }
+    ]
+  }
+}
