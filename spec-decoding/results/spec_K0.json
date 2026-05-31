@@ -1,0 +1,161 @@
+{
+  "K": 0,
+  "model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "endpoint": "http://localhost:8000/v1/chat/completions",
+  "timestamp": 1780260115.9016933,
+  "max_output_tokens": 256,
+  "prose": {
+    "name": "prose",
+    "n_prompts": 8,
+    "runs": [
+      {
+        "i": 0,
+        "n_streamed_chunks": 256,
+        "wall_s": 18.202572247944772,
+        "tps_chunks": 14.063946375980164,
+        "error": null
+      },
+      {
+        "i": 1,
+        "n_streamed_chunks": 256,
+        "wall_s": 18.167146555148065,
+        "tps_chunks": 14.091370883307853,
+        "error": null
+      },
+      {
+        "i": 2,
+        "n_streamed_chunks": 256,
+        "wall_s": 18.178432290442288,
+        "tps_chunks": 14.08262252265822,
+        "error": null
+      },
+      {
+        "i": 3,
+        "n_streamed_chunks": 239,
+        "wall_s": 17.048406679183245,
+        "tps_chunks": 14.018905373241015,
+        "error": null
+      },
+      {
+        "i": 4,
+        "n_streamed_chunks": 256,
+        "wall_s": 18.25841528363526,
+        "tps_chunks": 14.020932048218278,
+        "error": null
+      },
+      {
+        "i": 5,
+        "n_streamed_chunks": 256,
+        "wall_s": 18.198010968975723,
+        "tps_chunks": 14.067471463581,
+        "error": null
+      },
+      {
+        "i": 6,
+        "n_streamed_chunks": 256,
+        "wall_s": 18.20530130714178,
+        "tps_chunks": 14.061838125116525,
+        "error": null
+      },
+      {
+        "i": 7,
+        "n_streamed_chunks": 256,
+        "wall_s": 18.206678353250027,
+        "tps_chunks": 14.060774570354406,
+        "error": null
+      }
+    ],
+    "mean_wall_s": 18.058120460715145,
+    "mean_chunks_per_s": 14.058482670307182,
+    "spec_drafted": null,
+    "spec_accepted": null,
+    "spec_emitted": null,
+    "spec_acceptance_rate": null,
+    "generation_tokens_total_delta": 2032.0,
+    "metrics_before": {
+      "vllm:prompt_tokens_total": 39.0,
+      "vllm:generation_tokens_total": 3.0
+    },
+    "metrics_after": {
+      "vllm:prompt_tokens_total": 487.0,
+      "vllm:generation_tokens_total": 2035.0
+    }
+  },
+  "code": {
+    "name": "code",
+    "n_prompts": 8,
+    "runs": [
+      {
+        "i": 0,
+        "n_streamed_chunks": 256,
+        "wall_s": 18.206899815239012,
+        "tps_chunks": 14.060603540297963,
+        "error": null
+      },
+      {
+        "i": 1,
+        "n_streamed_chunks": 256,
+        "wall_s": 18.212791378609836,
+        "tps_chunks": 14.056055147079833,
+        "error": null
+      },
+      {
+        "i": 2,
+        "n_streamed_chunks": 256,
+        "wall_s": 18.26576021965593,
+        "tps_chunks": 14.015294021242891,
+        "error": null
+      },
+      {
+        "i": 3,
+        "n_streamed_chunks": 256,
+        "wall_s": 18.22015822585672,
+        "tps_chunks": 14.050371946644429,
+        "error": null
+      },
+      {
+        "i": 4,
+        "n_streamed_chunks": 256,
+        "wall_s": 18.22679323796183,
+        "tps_chunks": 14.045257257146933,
+        "error": null
+      },
+      {
+        "i": 5,
+        "n_streamed_chunks": 256,
+        "wall_s": 18.24587991926819,
+        "tps_chunks": 14.030564770387226,
+        "error": null
+      },
+      {
+        "i": 6,
+        "n_streamed_chunks": 256,
+        "wall_s": 18.24949825089425,
+        "tps_chunks": 14.027782927536414,
+        "error": null
+      },
+      {
+        "i": 7,
+        "n_streamed_chunks": 256,
+        "wall_s": 18.257227217778563,
+        "tps_chunks": 14.021844442551043,
+        "error": null
+      }
+    ],
+    "mean_wall_s": 18.23562603315804,
+    "mean_chunks_per_s": 14.038471756610841,
+    "spec_drafted": null,
+    "spec_accepted": null,
+    "spec_emitted": null,
+    "spec_acceptance_rate": null,
+    "generation_tokens_total_delta": 2048.0,
+    "metrics_before": {
+      "vllm:prompt_tokens_total": 487.0,
+      "vllm:generation_tokens_total": 2035.0
+    },
+    "metrics_after": {
+      "vllm:prompt_tokens_total": 1044.0,
+      "vllm:generation_tokens_total": 4083.0
+    }
+  }
+}
