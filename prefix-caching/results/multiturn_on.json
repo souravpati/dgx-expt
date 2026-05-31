@@ -1,0 +1,53 @@
+{
+  "label": "multiturn_on",
+  "model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "step_tokens": 1024,
+  "n_turns": 5,
+  "rows": [
+    {
+      "ttft_s": 0.07784666866064072,
+      "wall_s": 1.1426280653104186,
+      "n_chunks": 16,
+      "error": null,
+      "turn": 1,
+      "prompt_len": 1024,
+      "new_tokens_this_turn": 1024
+    },
+    {
+      "ttft_s": 0.08072827849537134,
+      "wall_s": 1.1526115285232663,
+      "n_chunks": 16,
+      "error": null,
+      "turn": 2,
+      "prompt_len": 2048,
+      "new_tokens_this_turn": 1024
+    },
+    {
+      "ttft_s": 0.08207750134170055,
+      "wall_s": 1.1600476559251547,
+      "n_chunks": 16,
+      "error": null,
+      "turn": 3,
+      "prompt_len": 3072,
+      "new_tokens_this_turn": 1024
+    },
+    {
+      "ttft_s": 0.08673521783202887,
+      "wall_s": 1.172989470884204,
+      "n_chunks": 16,
+      "error": null,
+      "turn": 4,
+      "prompt_len": 4096,
+      "new_tokens_this_turn": 1024
+    },
+    {
+      "ttft_s": 0.24875129759311676,
+      "wall_s": 1.34510768763721,
+      "n_chunks": 16,
+      "error": null,
+      "turn": 5,
+      "prompt_len": 5120,
+      "new_tokens_this_turn": 1024
+    }
+  ]
+}
