@@ -1,0 +1,92 @@
+{
+  "label": "on",
+  "model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "config": {
+    "shared_prefix_len": 4096,
+    "query_len": 64,
+    "output_tokens": 32,
+    "n_requests": 10
+  },
+  "rows": [
+    {
+      "ttft_s": 0.9988416424021125,
+      "wall_s": 3.253638291731477,
+      "n_chunks": 32,
+      "error": null,
+      "i": 0,
+      "prompt_len": 4160
+    },
+    {
+      "ttft_s": 0.0907024685293436,
+      "wall_s": 2.344299679622054,
+      "n_chunks": 32,
+      "error": null,
+      "i": 1,
+      "prompt_len": 4160
+    },
+    {
+      "ttft_s": 0.08948631957173347,
+      "wall_s": 2.3411730797961354,
+      "n_chunks": 32,
+      "error": null,
+      "i": 2,
+      "prompt_len": 4160
+    },
+    {
+      "ttft_s": 0.08905598241835833,
+      "wall_s": 2.3460694923996925,
+      "n_chunks": 32,
+      "error": null,
+      "i": 3,
+      "prompt_len": 4160
+    },
+    {
+      "ttft_s": 0.09025337919592857,
+      "wall_s": 2.3447153959423304,
+      "n_chunks": 32,
+      "error": null,
+      "i": 4,
+      "prompt_len": 4160
+    },
+    {
+      "ttft_s": 0.08900713175535202,
+      "wall_s": 2.3459641113877296,
+      "n_chunks": 32,
+      "error": null,
+      "i": 5,
+      "prompt_len": 4160
+    },
+    {
+      "ttft_s": 0.09227215498685837,
+      "wall_s": 2.3497001826763153,
+      "n_chunks": 32,
+      "error": null,
+      "i": 6,
+      "prompt_len": 4160
+    },
+    {
+      "ttft_s": 0.09147695172578096,
+      "wall_s": 2.3471169136464596,
+      "n_chunks": 32,
+      "error": null,
+      "i": 7,
+      "prompt_len": 4160
+    },
+    {
+      "ttft_s": 0.09132638946175575,
+      "wall_s": 2.346598133444786,
+      "n_chunks": 32,
+      "error": null,
+      "i": 8,
+      "prompt_len": 4160
+    },
+    {
+      "ttft_s": 0.09125078842043877,
+      "wall_s": 2.345662615261972,
+      "n_chunks": 32,
+      "error": null,
+      "i": 9,
+      "prompt_len": 4160
+    }
+  ]
+}
