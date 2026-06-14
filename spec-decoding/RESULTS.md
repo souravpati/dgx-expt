@@ -3,9 +3,13 @@
 **Experiment**: does speculative decoding give a 2–3× single-user
 tokens/sec lift on memory-bound GB10, as Chapter 7 predicts?
 
-**Headline**: **yes — 1.87× on prose, 2.45× on code at K=3**, exactly
-matching the chapter's compound-acceptance formula. Both acceptance
-rates (61% prose, 92% code) bracket the chapter's predictions.
+**Headline**: **yes — up to 1.87× on prose and 2.76× on code**,
+matching the chapter's compound-acceptance formula. The K-sweep
+(K ∈ {0, 3, 5}) reveals the key asymmetry: **prose plateaus at K=3**
+(deeper speculation buys nothing once α collapses), while **code keeps
+gaining through K=5** because its high acceptance survives deeper
+proposals. The optimal K is workload-determined, exactly as the
+acceptance formula predicts.
 
 ## Setup
 
@@ -20,24 +24,37 @@ max_tokens=256, two workload classes (8 prompts each):
 - **Prose** — narrative continuations.
 - **Code** — function implementations with type hints.
 
-Two server configurations:
+Three server configurations:
 
 | K | `num_speculative_tokens` |
 |---|---|
 | 0 | baseline (no spec) |
 | 3 | the chapter's "near-optimal for prose" point |
+| 5 | the chapter's "near-optimal for code" point |
 
-We measured K=3 only; the K-sweep curve (K=5 etc.) is deferred to a
-follow-up if needed. Two points are enough to establish that spec
-decoding works on this hardware and to falsify the chapter's geometric-
-acceptance formula.
+The K-sweep ({0, 3, 5}) is enough to locate each workload's knee and
+to test the chapter's claim that optimal depth tracks acceptance rate.
 
 ## Results
 
-| Workload | K=0 baseline | K=3 spec | Speedup | Acceptance α | Tokens / chunk |
+| Workload | K | tok/s | Speedup | Acceptance α | Tokens / chunk |
 |---|---:|---:|---:|---:|---:|
-| Prose | 14.07 tok/s | **26.24** | **1.87×** | 0.614 | 2.81 |
-| Code  | 14.04 tok/s | **34.44** | **2.45×** | 0.916 | 3.69 |
+| Prose | 0 | 14.07 | 1.00× | — | 1.00 |
+| Prose | 3 | **26.24** | **1.86×** | 0.614 | 2.81 |
+| Prose | 5 | 26.15 | 1.86× | 0.511 | 3.50 |
+| Code  | 0 | 14.04 | 1.00× | — | 1.00 |
+| Code  | 3 | 34.44 | 2.45× | 0.916 | 3.69 |
+| Code  | 5 | **38.73** | **2.76×** | 0.871 | 5.21 |
+
+**The sweep's verdict:** prose is flat from K=3 to K=5 (26.24 → 26.15)
+— its per-position acceptance falls from 0.61 to 0.51 as the drafter
+proposes deeper, so the extra speculative tokens are drafted, verified,
+and then *rejected*, paying cost for no benefit. Code instead climbs
+(34.44 → 38.73, +12%): acceptance only dips slightly (0.92 → 0.87), so
+the deeper proposals are mostly accepted and each verification round
+emits more tokens (3.69 → 5.21 tok/chunk). This is the chapter's claim
+made concrete — **optimal K scales with α**, so structured workloads
+want deeper speculation than open-ended ones.
 
 ### How the formula predicted these
 
@@ -111,9 +128,12 @@ max speedup at K=3, α=1 = 4 tokens / 0.095 s = 42 tok/s = 3.0× over 14 baselin
 
 So K=3 caps at 3.0× speedup. Our code result (2.45×) is 82% of that
 ceiling — most of the gap is just that 8% of code tokens get
-rejected. To push higher you go to larger K (we predicted K\* ≈ 13
-for code), at the cost of slightly worse worst-case latency when
-rejections happen.
+rejected. To push higher you raise K, and the sweep confirms it:
+**K=5 lifts code to 2.76×** (its own K=5 ceiling, with α=0.87, is
+6 tokens / ~0.11 s ≈ 3.9× at α=1). Prose, by contrast, cannot follow
+— its α is too low for the deeper tokens to survive, so it stays at
+1.86×. The cost of larger K is slightly worse worst-case latency when
+a deep proposal is rejected.
 
 ### Why this works on Spark specifically
 
@@ -130,12 +150,16 @@ gate it on workload classification.
 
 For interactive single-user serving on Spark:
 
-| Workload | Without spec | With K=3 spec | When to use |
+| Workload | Without spec | Best spec | When to use |
 |---|---:|---:|---|
-| Chat (prose-like) | 14 tok/s | 26 tok/s (1.87×) | Always — TTFT unchanged, ITL halved. |
-| Code completion | 14 tok/s | 34 tok/s (2.45×) | Always — the easy 2.5× win on this stack. |
+| Chat (prose-like) | 14 tok/s | 26 tok/s (1.87×) at **K=3** | Always — TTFT unchanged, ITL halved. K>3 wastes draft cost (α too low). |
+| Code completion | 14 tok/s | 39 tok/s (2.76×) at **K=5** | Always — and go deeper than prose: high α rewards K=5+. |
 | RAG with long retrieved context | depends on S | needs sweep | Probably still wins but α may dip for cited content. |
 | High-batch throughput (B ≥ 64) | already near roof | likely neutral or slight loss | Skip — spec helps memory-bound regimes only. |
+
+**Tune K to the workload, not globally.** The sweep shows a single
+server-wide K is a compromise: prose wants K=3, code wants K=5+. If the
+stack can classify requests, set K per workload class.
 
 The chapter's claim that **spec decoding is the best single-user
 optimization on bandwidth-bound hardware** holds up empirically on
@@ -143,8 +167,10 @@ GB10.
 
 ## What we left on the table
 
-- **K=5 sweep**: code's high α suggests K=5 (or even K=8) would push
-  speedup further. Skipped to save time.
+- **K beyond 5**: code's α=0.87 at K=5 still leaves headroom; the
+  earlier prediction was K\* ≈ 13 for code. K=8 is the natural next
+  probe — but watch worst-case ITL when a deep proposal is rejected.
+  Prose is settled: it has already plateaued by K=3.
 - **Different drafters**: a *better* drafter (e.g., a fine-tuned
   1B trained on the same distribution as the target) would push α
   toward 1.0 for both workloads.
@@ -158,13 +184,14 @@ GB10.
 
 - `start-vllm-spec.sh K` — server launcher parameterized by K
 - `bench_spec.py` — prose + code workload runner; queries `/metrics`
-- `plot_spec.py` — throughput vs K (only K=0 vs K=3 here)
-- `results/spec_K0.json`, `results/spec_K3.json` — raw runs
+- `plot_spec.py` — throughput vs K (K=0, 3, 5)
+- `results/spec_K0.json`, `results/spec_K3.json`, `results/spec_K5.json` — raw runs
 - `results/spec_decoding.png` — overlay plot
 
 ## Open questions for follow-up
 
-- Optimal K\* for code on this stack — we predicted ~13, untested.
+- Optimal K\* for code on this stack — we predicted ~13; measured
+  monotonic gain through K=5 (2.76×). K=8 is the next probe.
 - Does spec stay positive at B=4 or B=8? The verification cost
   scales with B, so eventually it stops being a net win.
 - Why was code's tokens-per-chunk (3.69) very close to formula but

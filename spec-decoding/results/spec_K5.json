@@ -1,0 +1,169 @@
+{
+  "K": 5,
+  "model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "endpoint": "http://localhost:8000/v1/chat/completions",
+  "timestamp": 1781444678.1138961,
+  "max_output_tokens": 256,
+  "prose": {
+    "name": "prose",
+    "n_prompts": 8,
+    "runs": [
+      {
+        "i": 0,
+        "n_streamed_chunks": 73,
+        "wall_s": 9.81897300761193,
+        "tps_chunks": 7.434586075693298,
+        "error": null
+      },
+      {
+        "i": 1,
+        "n_streamed_chunks": 73,
+        "wall_s": 9.775486044585705,
+        "tps_chunks": 7.467659374382936,
+        "error": null
+      },
+      {
+        "i": 2,
+        "n_streamed_chunks": 78,
+        "wall_s": 10.423200896941125,
+        "tps_chunks": 7.4833058262256555,
+        "error": null
+      },
+      {
+        "i": 3,
+        "n_streamed_chunks": 63,
+        "wall_s": 8.453072752803564,
+        "tps_chunks": 7.452911129755187,
+        "error": null
+      },
+      {
+        "i": 4,
+        "n_streamed_chunks": 74,
+        "wall_s": 9.921194131486118,
+        "tps_chunks": 7.4587795601289555,
+        "error": null
+      },
+      {
+        "i": 5,
+        "n_streamed_chunks": 79,
+        "wall_s": 10.5630560554564,
+        "tps_chunks": 7.4788962195454936,
+        "error": null
+      },
+      {
+        "i": 6,
+        "n_streamed_chunks": 62,
+        "wall_s": 8.32958832103759,
+        "tps_chunks": 7.443345050248157,
+        "error": null
+      },
+      {
+        "i": 7,
+        "n_streamed_chunks": 80,
+        "wall_s": 10.68391314893961,
+        "tps_chunks": 7.487893142218223,
+        "error": null
+      }
+    ],
+    "mean_wall_s": 9.746060544857755,
+    "mean_chunks_per_s": 7.463422047274738,
+    "spec_drafted": 2870.0,
+    "spec_accepted": 1468.0,
+    "spec_emitted": null,
+    "spec_acceptance_rate": 0.5114982578397212,
+    "generation_tokens_total_delta": 2039.0,
+    "metrics_before": {
+      "vllm:spec_decode_num_draft_tokens_total": 5.0,
+      "vllm:spec_decode_num_accepted_tokens_total": 5.0,
+      "vllm:prompt_tokens_total": 39.0,
+      "vllm:generation_tokens_total": 3.0
+    },
+    "metrics_after": {
+      "vllm:spec_decode_num_draft_tokens_total": 2875.0,
+      "vllm:spec_decode_num_accepted_tokens_total": 1473.0,
+      "vllm:prompt_tokens_total": 487.0,
+      "vllm:generation_tokens_total": 2042.0
+    }
+  },
+  "code": {
+    "name": "code",
+    "n_prompts": 8,
+    "runs": [
+      {
+        "i": 0,
+        "n_streamed_chunks": 49,
+        "wall_s": 6.606974270194769,
+        "tps_chunks": 7.416405452197336,
+        "error": null
+      },
+      {
+        "i": 1,
+        "n_streamed_chunks": 46,
+        "wall_s": 6.1884575840085745,
+        "tps_chunks": 7.4331930655657,
+        "error": null
+      },
+      {
+        "i": 2,
+        "n_streamed_chunks": 53,
+        "wall_s": 7.18083621468395,
+        "tps_chunks": 7.380756003266214,
+        "error": null
+      },
+      {
+        "i": 3,
+        "n_streamed_chunks": 49,
+        "wall_s": 6.577238549478352,
+        "tps_chunks": 7.449935049700493,
+        "error": null
+      },
+      {
+        "i": 4,
+        "n_streamed_chunks": 49,
+        "wall_s": 6.574621988460422,
+        "tps_chunks": 7.452899966873126,
+        "error": null
+      },
+      {
+        "i": 5,
+        "n_streamed_chunks": 50,
+        "wall_s": 6.715678084641695,
+        "tps_chunks": 7.445264554051011,
+        "error": null
+      },
+      {
+        "i": 6,
+        "n_streamed_chunks": 47,
+        "wall_s": 6.315058700740337,
+        "tps_chunks": 7.442527809676578,
+        "error": null
+      },
+      {
+        "i": 7,
+        "n_streamed_chunks": 50,
+        "wall_s": 6.718639307655394,
+        "tps_chunks": 7.441983072826768,
+        "error": null
+      }
+    ],
+    "mean_wall_s": 6.609688087482937,
+    "mean_chunks_per_s": 7.432870621769653,
+    "spec_drafted": 1925.0,
+    "spec_accepted": 1677.0,
+    "spec_emitted": null,
+    "spec_acceptance_rate": 0.8711688311688311,
+    "generation_tokens_total_delta": 2048.0,
+    "metrics_before": {
+      "vllm:spec_decode_num_draft_tokens_total": 2875.0,
+      "vllm:spec_decode_num_accepted_tokens_total": 1473.0,
+      "vllm:prompt_tokens_total": 487.0,
+      "vllm:generation_tokens_total": 2042.0
+    },
+    "metrics_after": {
+      "vllm:spec_decode_num_draft_tokens_total": 4800.0,
+      "vllm:spec_decode_num_accepted_tokens_total": 3150.0,
+      "vllm:prompt_tokens_total": 1044.0,
+      "vllm:generation_tokens_total": 4090.0
+    }
+  }
+}

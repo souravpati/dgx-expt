@@ -9,6 +9,7 @@ it answers, the method, the expected result, and rough effort.
 - [`vllm-vs-ollama/`](vllm-vs-ollama/) — single vs concurrent serving comparison.
 - [`roofline/`](roofline/) — matmul compute + memory ceilings across precisions. BF16 peak ~90 TF/s, DRAM peak 213 GB/s (245 GB/s effective for streaming reads, measured in #7-ish derivation).
 - [`prefill-vs-decode/`](prefill-vs-decode/) — attention arithmetic intensity. Prefill climbs to 90 TF/s by T=16k; decode pinned at I = N/K = 4 F/B regardless of S or B.
+- [`spec-decoding/`](spec-decoding/) — **#3** K-sweep ({0,3,5}). Prose peaks at K=3 (1.87×, plateaus as α drops 0.61→0.51); code keeps gaining to K=5 (2.76×, α stays 0.92→0.87). Optimal K scales with acceptance rate, as the chapter predicts.
 
 ## Backlog
 
